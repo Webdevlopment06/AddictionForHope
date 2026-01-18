@@ -5,137 +5,217 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Addiction to Hope</title>
 
-  <!-- SDKs -->
   <script src="/_sdk/element_sdk.js"></script>
-  <script src="/_sdk/data_sdk.js" type="text/javascript"></script>
-
-  <!-- Tailwind -->
   <script src="https://cdn.tailwindcss.com"></script>
 
-  <!-- External CSS (ALL styles moved here) -->
-  <link rel="stylesheet" href="styles.css">
+  <!-- EXTERNAL CSS -->
+  <link rel="stylesheet" href="style.css">
+
+  <style>@view-transition { navigation: auto; }</style>
+  <script src="/_sdk/data_sdk.js" type="text/javascript"></script>
 </head>
 
-<body class="h-full smooth-scroll" style="background-color: #f8f8f8;">
-  <div id="app" class="w-full h-full overflow-auto" style="background-color: #f8f8f8;">
+<body class="h-full smooth-scroll">
+  <div id="app" class="w-full h-full overflow-auto">
 
     <!-- Navigation -->
-    <nav id="nav" class="w-full py-4 px-6 shadow-md fixed top-0 left-0 right-0 z-50" style="background-color: #fff; color: #2a2e30;">
+    <nav id="nav" class="nav">
       <div class="max-w-6xl mx-auto flex justify-between items-center">
         <div>
           <h1 id="site-title" class="text-2xl font-bold">Addiction to Hope</h1>
           <p id="tagline" class="text-sm opacity-70">Connecting Recovery to Careers</p>
         </div>
+
         <div class="flex gap-6">
-          <a href="#information">Career Info</a>
-          <a href="#resources">Support</a>
-          <a href="#state-services">Find Jobs</a>
-          <a href="#about">About</a>
-          <a href="#contact">Contact</a>
+          <a href="#information" class="nav-link">Career Info</a>
+          <a href="#resources" class="nav-link">Support</a>
+          <a href="#state-services" class="nav-link">Find Jobs</a>
+          <a href="#about" class="nav-link">About</a>
+          <a href="#contact" class="nav-link">Contact</a>
         </div>
       </div>
     </nav>
 
-    <!-- Hero -->
-    <section id="hero" class="w-full min-h-screen flex items-center justify-center px-6 pt-20 fade-in"
-      style="background-color:#1800AD;color:#fff;">
-      <div class="max-w-4xl text-center">
-        <h2 id="hero-heading" class="text-5xl font-bold mb-6">Your Career Starts Here</h2>
-        <p id="hero-subheading" class="text-xl mb-8 max-w-2xl mx-auto opacity-90">
+    <!-- Hero Section -->
+    <section id="hero" class="hero">
+      <div class="max-w-4xl text-center fade-in">
+        <h2 id="hero-heading" class="hero-title">Your Career Starts Here</h2>
+        <p id="hero-subheading" class="hero-sub">
           Recovery opens doors. We connect people in recovery with meaningful employment opportunities and career support.
+          Your past doesn't define your future.
         </p>
-        <button id="cta-button"
-          class="px-8 py-4 rounded-full font-semibold text-lg"
-          style="background-color:#f1b327;color:#000;">
-          Find Jobs Now
-        </button>
+
+        <button id="cta-button" class="cta-button">Find Jobs Now</button>
       </div>
     </section>
 
-    <!-- Information -->
-    <section id="information" class="w-full py-20 px-6">
+    <!-- Information Section -->
+    <section id="information" class="section">
       <div class="max-w-6xl mx-auto">
-        <h2 id="info-heading" class="text-4xl font-bold text-center mb-4" style="color:#1800AD;">
-          Career Resources for Recovery
-        </h2>
-        <p id="info-subheading" class="text-lg text-center max-w-3xl mx-auto mb-12">
-          Access the tools and support you need to build a successful career.
+        <h2 id="info-heading" class="section-title">Career Resources for Recovery</h2>
+        <p id="info-subheading" class="section-sub">
+          Access the tools and support you need to build a successful career. We believe in second chances and the power of meaningful work.
         </p>
 
         <div class="grid md:grid-cols-3 gap-8">
-          <div class="info-card rounded-lg p-8 shadow-lg bg-white">
+          <div class="info-card">
             <div class="text-5xl mb-4">💼</div>
-            <h3 class="text-2xl font-bold mb-4" style="color:#1800AD;">Job Opportunities</h3>
-            <p>Browse recovery-friendly employers actively hiring.</p>
+            <h3 class="info-card-title">Job Opportunities</h3>
+            <p class="info-card-text">
+              Browse recovery-friendly employers actively hiring. Find full-time, part-time, and entry-level positions with companies that support second chances.
+            </p>
+            <a href="#" class="info-card-link">Browse Jobs →</a>
           </div>
 
-          <div class="info-card rounded-lg p-8 shadow-lg bg-white">
+          <div class="info-card">
             <div class="text-5xl mb-4">📝</div>
-            <h3 class="text-2xl font-bold mb-4" style="color:#1800AD;">Resume & Interview Prep</h3>
-            <p>Build resumes and prepare for interviews with confidence.</p>
+            <h3 class="info-card-title">Resume &amp; Interview Prep</h3>
+            <p class="info-card-text">
+              Get help building your resume, writing cover letters, and preparing for interviews. Learn how to address employment gaps with confidence.
+            </p>
+            <a href="#" class="info-card-link">Get Started →</a>
           </div>
 
-          <div class="info-card rounded-lg p-8 shadow-lg bg-white">
+          <div class="info-card">
             <div class="text-5xl mb-4">🎓</div>
-            <h3 class="text-2xl font-bold mb-4" style="color:#1800AD;">Skills Training</h3>
-            <p>Access certifications and vocational programs.</p>
+            <h3 class="info-card-title">Skills Training</h3>
+            <p class="info-card-text">
+              Access vocational training programs, certifications, and skill-building workshops to increase your employability and career options.
+            </p>
+            <a href="#" class="info-card-link">View Programs →</a>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- State Services -->
-    <section id="state-services" class="w-full py-20 px-6 bg-white">
-      <div class="max-w-6xl mx-auto text-center">
-        <h2 id="map-heading" class="text-4xl font-bold mb-4" style="color:#1800AD;">
-          Find Job Services in Your State
-        </h2>
-        <p id="map-subheading" class="mb-12">
-          Select your state to find local employment programs.
+    <!-- Resources Section -->
+    <section id="resources" class="resources">
+      <div class="max-w-6xl mx-auto">
+        <h2 id="resources-heading" class="resources-title">Employment Support</h2>
+        <p id="resources-subheading" class="resources-sub">
+          From resume building to interview coaching, we provide comprehensive career services tailored for people in recovery.
         </p>
 
-        <div id="state-grid" class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-3"></div>
+        <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+          <div class="info-card">
+            <div class="text-5xl mb-4">👔</div>
+            <h3 class="info-card-title">Career Counseling</h3>
+            <div class="resources-list">
+              <div>
+                <p class="font-semibold">One-on-One Career Coaching</p>
+                <p class="opacity-80">Work with a dedicated coach to plan your career path</p>
+              </div>
+              <div>
+                <p class="font-semibold">Job Search Strategy</p>
+                <p class="opacity-80">Learn effective techniques to find and secure employment</p>
+              </div>
+              <div>
+                <p class="font-semibold">Workplace Success Skills</p>
+                <p class="opacity-80">Build professional communication and soft skills</p>
+              </div>
+            </div>
+          </div>
 
-        <div id="state-details" class="hidden"></div>
+          <div class="info-card">
+            <div class="text-5xl mb-4">🤝</div>
+            <h3 class="info-card-title">Employer Network</h3>
+            <div class="resources-list">
+              <div>
+                <p class="font-semibold">Recovery-Friendly Companies</p>
+                <p class="opacity-80">Connect with employers who value second chances</p>
+              </div>
+              <div>
+                <p class="font-semibold">Direct Job Placement</p>
+                <p class="opacity-80">Get matched with open positions based on your skills</p>
+              </div>
+              <div>
+                <p class="font-semibold">Supportive Work Environments</p>
+                <p class="opacity-80">Find companies with flexible policies and understanding culture</p>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
 
-    <!-- About -->
-    <section id="about" class="w-full py-20 px-6 bg-gray-800 text-white">
+    <!-- State Services Map Section -->
+    <section id="state-services" class="section">
+      <div class="max-w-6xl mx-auto">
+        <h2 id="map-heading" class="section-title">Find Job Services in Your State</h2>
+        <p id="map-subheading" class="section-sub">
+          Select your state to find local employment programs, vocational training, and job placement services designed for people in recovery.
+        </p>
+
+        <div id="state-grid" class="state-grid"></div>
+
+        <div id="state-details" class="hidden">
+          <div class="state-details-card">
+            <div class="flex justify-between items-start mb-6">
+              <div>
+                <h3 id="selected-state-name" class="state-name"></h3>
+                <p class="state-subtitle">Employment Services &amp; Job Programs</p>
+              </div>
+
+              <button id="close-state-details" class="back-button">← Back to Map</button>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-6">
+              <div>
+                <h4 class="state-section-title">💼 Job Programs</h4>
+                <ul id="treatment-centers" class="state-list"></ul>
+              </div>
+              <div>
+                <h4 class="state-section-title">🎯 Career Support</h4>
+                <ul id="support-groups" class="state-list"></ul>
+              </div>
+            </div>
+
+            <div class="state-resources">
+              <h4 class="state-section-title">📋 State Employment Resources</h4>
+              <ul id="state-resources" class="state-list"></ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+      <div class="max-w-4xl mx-auto">
+        <h2 id="about-heading" class="about-title">About Addiction to Hope</h2>
+        <p id="about-text" class="about-text">
+          Addiction to Hope is a comprehensive employment platform dedicated to helping people in recovery find meaningful work.
+          We partner with recovery-friendly employers and provide career support services to help you build a stable, fulfilling future.
+          Employment is a cornerstone of lasting recovery.
+        </p>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
       <div class="max-w-4xl mx-auto text-center">
-        <h2 id="about-heading" class="text-4xl font-bold mb-8 text-yellow-400">
-          About Addiction to Hope
-        </h2>
-        <p id="about-text" class="text-lg opacity-90">
-          Addiction to Hope helps people in recovery find meaningful work.
+        <h2 id="contact-heading" class="contact-title">Ready to Take the First Step?</h2>
+        <p id="contact-text" class="contact-sub">
+          Reaching out for help is a sign of strength. Our compassionate team is here 24/7 to answer your questions and guide you toward the support you need.
         </p>
-      </div>
-    </section>
 
-    <!-- Contact -->
-    <section id="contact" class="w-full py-20 px-6 text-center"
-      style="background-color:#1800AD;color:#fff;">
-      <h2 id="contact-heading" class="text-4xl font-bold mb-8">
-        Ready to Take the First Step?
-      </h2>
-      <p id="contact-text" class="mb-8">
-        Our team is here 24/7 to help.
-      </p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <a href="tel:1-800-123-4567" class="contact-button contact-button-primary">Call: 1-800-123-4567</a>
+          <a href="mailto:support@addictiontohope.org" class="contact-button contact-button-secondary">Email Us</a>
+        </div>
+      </div>
     </section>
 
     <!-- Footer -->
-    <footer id="footer" class="py-8 text-center bg-black text-white">
-      <p id="footer-text" class="opacity-80">
-        © 2024 Addiction to Hope. All rights reserved.
-      </p>
+    <footer id="footer" class="footer">
+      <p id="footer-text" class="footer-text">© 2024 Addiction to Hope. All rights reserved. Recovery is possible.</p>
     </footer>
 
   </div>
 
-  <!-- ALL your original JS stays exactly the same -->
-  <script>
-    /* unchanged JS — keep your existing script here */
-  </script>
+  <!-- JS (unchanged) -->
+  <script src="app.js"></script>
 </body>
 </html>
+
 
