@@ -1,14 +1,391 @@
-/* Base */
+/* -------------------------------------------
+   BASE
+-------------------------------------------- */
 body {
   box-sizing: border-box;
+  background-color: #f8f8f8;
 }
 
-/* Smooth scrolling */
 .smooth-scroll {
   scroll-behavior: smooth;
 }
 
-/* Fade animation */
+/* -------------------------------------------
+   NAV
+-------------------------------------------- */
+.nav {
+  width: 100%;
+  padding: 1rem 1.5rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 50;
+  background-color: #fff;
+  color: #2a2e30;
+}
+
+.nav-link {
+  transition: opacity 0.2s ease;
+}
+
+.nav-link:hover {
+  opacity: 0.7;
+}
+
+/* -------------------------------------------
+   HERO
+-------------------------------------------- */
+.hero {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5rem 1.5rem 2rem;
+  background-color: #1800AD;
+  color: #fff;
+}
+
+.hero-title {
+  font-size: 3.125rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+}
+
+.hero-sub {
+  font-size: 1.25rem;
+  margin-bottom: 2rem;
+  max-width: 40rem;
+  margin-left: auto;
+  margin-right: auto;
+  opacity: 0.9;
+}
+
+.cta-button {
+  padding: 1rem 2rem;
+  border-radius: 999px;
+  font-weight: 600;
+  font-size: 1.125rem;
+  background-color: #f1b327;
+  color: #000;
+  transition: opacity 0.2s ease;
+}
+
+.cta-button:hover {
+  opacity: 0.9;
+}
+
+/* -------------------------------------------
+   GENERAL SECTIONS
+-------------------------------------------- */
+.section {
+  width: 100%;
+  padding: 5rem 1.5rem;
+  background-color: #f8f8f8;
+}
+
+.section-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  text-align: center;
+  color: #1800AD;
+}
+
+.section-sub {
+  font-size: 1.125rem;
+  margin-bottom: 3rem;
+  text-align: center;
+  max-width: 48rem;
+  margin-left: auto;
+  margin-right: auto;
+  color: #2a2e30;
+}
+
+/* -------------------------------------------
+   CARDS
+-------------------------------------------- */
+.info-card {
+  background-color: #fff;
+  padding: 2rem;
+  border-radius: 0.75rem;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.info-card:hover {
+  transform: translateY(-5px);
+}
+
+.info-card-title {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: #1800AD;
+}
+
+.info-card-text {
+  line-height: 1.7;
+  margin-bottom: 1rem;
+  color: #2a2e30;
+}
+
+.info-card-link {
+  display: inline-block;
+  font-weight: 600;
+  color: #f1b327;
+  transition: opacity 0.2s ease;
+}
+
+.info-card-link:hover {
+  opacity: 0.8;
+}
+
+/* -------------------------------------------
+   RESOURCES
+-------------------------------------------- */
+.resources {
+  width: 100%;
+  padding: 5rem 1.5rem;
+  background-color: #f1b327;
+}
+
+.resources-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  text-align: center;
+  color: #fff;
+}
+
+.resources-sub {
+  font-size: 1.125rem;
+  margin-bottom: 3rem;
+  text-align: center;
+  max-width: 48rem;
+  margin-left: auto;
+  margin-right: auto;
+  color: #fff;
+  opacity: 0.95;
+}
+
+.resources-list {
+  color: #2a2e30;
+  margin-top: 1rem;
+}
+
+/* -------------------------------------------
+   STATE GRID
+-------------------------------------------- */
+.state-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.75rem;
+  margin-bottom: 3rem;
+}
+
+@media (min-width: 640px) {
+  .state-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (min-width: 768px) {
+  .state-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .state-grid {
+    grid-template-columns: repeat(6, 1fr);
+  }
+}
+
+.state-button {
+  padding: 0.75rem 1rem;
+  border-radius: 0.75rem;
+  font-weight: 600;
+  font-size: 0.875rem;
+  background-color: #fff;
+  color: #1800AD;
+  border: 2px solid #1800AD;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  transition: all 0.2s ease;
+}
+
+.state-button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+/* -------------------------------------------
+   STATE DETAILS
+-------------------------------------------- */
+.state-details-card {
+  background-color: #f8f8f8;
+  border: 3px solid #1800AD;
+  padding: 2rem;
+  border-radius: 0.75rem;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+  max-width: 64rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.state-name {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  color: #1800AD;
+}
+
+.state-subtitle {
+  font-size: 1.125rem;
+  color: #2a2e30;
+}
+
+.back-button {
+  padding: 0.5rem 1rem;
+  border-radius: 0.75rem;
+  font-weight: 600;
+  background-color: #1800AD;
+  color: #fff;
+  transition: opacity 0.2s ease;
+}
+
+.back-button:hover {
+  opacity: 0.8;
+}
+
+.state-section-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: #1800AD;
+}
+
+.state-list {
+  list-style: none;
+  padding-left: 0;
+}
+
+.state-list li {
+  padding-bottom: 0.75rem;
+  border-bottom: 1px solid #1800AD;
+  color: #2a2e30;
+}
+
+.state-list li a {
+  color: #f1b327;
+  transition: opacity 0.2s ease;
+}
+
+.state-list li a:hover {
+  opacity: 0.8;
+}
+
+.state-resources {
+  margin-top: 2rem;
+  padding-top: 1.5rem;
+  border-top: 2px solid #1800AD;
+}
+
+/* -------------------------------------------
+   ABOUT
+-------------------------------------------- */
+.about {
+  width: 100%;
+  padding: 5rem 1.5rem;
+  background-color: #2a2e30;
+}
+
+.about-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+  text-align: center;
+  color: #f1b327;
+}
+
+.about-text {
+  font-size: 1.125rem;
+  line-height: 1.8;
+  text-align: center;
+  max-width: 48rem;
+  margin-left: auto;
+  margin-right: auto;
+  color: #fff;
+  opacity: 0.9;
+}
+
+/* -------------------------------------------
+   CONTACT
+-------------------------------------------- */
+.contact {
+  width: 100%;
+  padding: 5rem 1.5rem;
+  background-color: #1800AD;
+  color: #fff;
+}
+
+.contact-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+}
+
+.contact-sub {
+  font-size: 1.125rem;
+  margin-bottom: 2rem;
+  max-width: 40rem;
+  margin-left: auto;
+  margin-right: auto;
+  opacity: 0.9;
+}
+
+.contact-button {
+  padding: 1rem 2rem;
+  border-radius: 999px;
+  font-weight: 600;
+  font-size: 1.125rem;
+  transition: opacity 0.2s ease;
+}
+
+.contact-button-primary {
+  background-color: #f1b327;
+  color: #000;
+}
+
+.contact-button-secondary {
+  background-color: #fff;
+  color: #1800AD;
+}
+
+.contact-button:hover {
+  opacity: 0.9;
+}
+
+/* -------------------------------------------
+   FOOTER
+-------------------------------------------- */
+.footer {
+  width: 100%;
+  padding: 2rem 1.5rem;
+  text-align: center;
+  background-color: #000;
+  color: #fff;
+}
+
+.footer-text {
+  opacity: 0.8;
+}
+
+/* -------------------------------------------
+   FADE IN
+-------------------------------------------- */
 .fade-in {
   animation: fadeIn 0.8s ease-in;
 }
@@ -24,26 +401,3 @@ body {
   }
 }
 
-/* State buttons */
-.state-button {
-  transition: all 0.2s ease;
-}
-
-.state-button:hover {
-  transform: scale(1.05);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-}
-
-/* Info cards */
-.info-card {
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.info-card:hover {
-  transform: translateY(-5px);
-}
-
-/* View transitions */
-@view-transition {
-  navigation: auto;
-}
