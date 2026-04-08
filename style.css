@@ -44,7 +44,13 @@ body {
   align-items: center;
   justify-content: center;
   padding: 5rem 1.5rem 2rem;
-  background-image: url(.../Images/hand.png);
+  background-image: 
+    linear-gradient(rgba(24, 0, 173, 0.7), rgba(24, 0, 173, 0.7)), 
+    url('../Images/hand.png');
+  
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   color: #fff;
 }
 
